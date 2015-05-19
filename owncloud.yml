@@ -1,0 +1,10 @@
+#Owncloud setup playbook
+---
+- hosts: OwnCloud
+  user: ubuntu
+  sudo: True
+  vars_files:
+    - vars/defaults.yml
+  roles:
+    - common
+    - owncloud
