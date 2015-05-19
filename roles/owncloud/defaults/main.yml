@@ -1,0 +1,8 @@
+---
+psql_admin_user: postgres
+psql_admin_pass: TODO
+owncloud_db_user: owncloud
+owncloud_db_pass: TODO
+owncloud_database: owncloud
+owncloud_domain: owncloud
+owncloud_apps_location: /var/www/owncloud/apps
