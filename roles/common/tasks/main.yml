@@ -1,0 +1,12 @@
+---
+
+- name: Ensure apt-cache is updated
+  apt: update_cache=yes
+
+- name: Install extra_packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - "{{ extra_packages }}"
+
+- name: Upgrade all available packages (safe)
+  apt: upgrade=safe
