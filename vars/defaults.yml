@@ -1,0 +1,14 @@
+extra_packages:
+    - unzip
+    - apt-transport-https
+    - apticron
+    - build-essential
+    - debian-goodies
+    - htop
+    - iftop
+    - iotop
+    - python-software-properties
+    - screen
+    - sudo
+    - update-notifier-common
+    - vim
