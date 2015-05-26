@@ -1,0 +1,9 @@
+# Install apps required to make owncloud usable for our case
+---
+
+- name: Obtain Mozilla_sync plugin for ownlocud
+  get_url: url=https://github.com/owncloud/mozilla_sync/archive/master.zip dest=/tmp
+- name: Extract mozilla_sync plugin to "{{owncloud_apps_location}}"
+  unarchive: creates=/tmp/mozilla_sync-master src=/tmp/mozilla_sync-master.zip dest=/tmp/ copy=no
+- name: Put plugin in correct location
+  command: creates={{owncloud_apps_location}}/mozilla_sync mv /tmp/mozilla_sync-master {{owncloud_apps_location}}/mozilla_sync
